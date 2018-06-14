@@ -194,6 +194,7 @@
     <Compile Include="Controllers\LocadorController.cs" />
     <Compile Include="Controllers\LocatarioController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
