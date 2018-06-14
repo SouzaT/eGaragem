@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,6 +49,12 @@
     <Compile Include="Repository\UsuarioRepository.cs" />
     <Compile Include="Uow\UnitOfWork.cs" />
     <Compile Include="Uow\UnitOfWorkFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eGaragem.Domain\eGaragem.Domain.csproj">
+      <Project>{809DA17A-9976-4D68-9F59-A880CA73F35F}</Project>
+      <Name>eGaragem.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

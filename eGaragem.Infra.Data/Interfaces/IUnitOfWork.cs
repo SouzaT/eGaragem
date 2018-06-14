@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 
-namespace eGarage.Infra.Data.Interfaces
+namespace eGaragem.Infra.Data.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {
