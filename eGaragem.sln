@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{08621E35-A9A8-441B-A22D-B936FC4D05C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{7562E6F7-3107-4849-80BB-333301DA23F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{1ED79AB0-1F9E-4A7A-B3BC-42E01DEC1A03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{4ABDF4EA-5FEF-44E9-99BE-7E717A4986C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eGaragem.UI.Mvc", "eGaragem.UI.Mvc\eGaragem.UI.Mvc.csproj", "{6C080F06-FDAD-4AEC-83EE-368851027566}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{BA1C5A95-242F-46A0-B594-222CEA375264}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eGaragem.Domain", "eGaragem.Domain\eGaragem.Domain.csproj", "{809DA17A-9976-4D68-9F59-A880CA73F35F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eGaragem.Infra.Data", "eGaragem.Infra.Data\eGaragem.Infra.Data.csproj", "{123A8C51-C6D0-4F96-8447-D23664119468}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eGaragem.Application", "eGaragem.Application\eGaragem.Application.csproj", "{7E58D5D4-825E-4D41-BF4E-DDB06519FBDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C080F06-FDAD-4AEC-83EE-368851027566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C080F06-FDAD-4AEC-83EE-368851027566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C080F06-FDAD-4AEC-83EE-368851027566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C080F06-FDAD-4AEC-83EE-368851027566}.Release|Any CPU.Build.0 = Release|Any CPU
+		{809DA17A-9976-4D68-9F59-A880CA73F35F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{809DA17A-9976-4D68-9F59-A880CA73F35F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{809DA17A-9976-4D68-9F59-A880CA73F35F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{809DA17A-9976-4D68-9F59-A880CA73F35F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{123A8C51-C6D0-4F96-8447-D23664119468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{123A8C51-C6D0-4F96-8447-D23664119468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{123A8C51-C6D0-4F96-8447-D23664119468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{123A8C51-C6D0-4F96-8447-D23664119468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E58D5D4-825E-4D41-BF4E-DDB06519FBDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E58D5D4-825E-4D41-BF4E-DDB06519FBDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E58D5D4-825E-4D41-BF4E-DDB06519FBDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E58D5D4-825E-4D41-BF4E-DDB06519FBDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4ABDF4EA-5FEF-44E9-99BE-7E717A4986C9} = {1ED79AB0-1F9E-4A7A-B3BC-42E01DEC1A03}
+		{6C080F06-FDAD-4AEC-83EE-368851027566} = {08621E35-A9A8-441B-A22D-B936FC4D05C4}
+		{809DA17A-9976-4D68-9F59-A880CA73F35F} = {7562E6F7-3107-4849-80BB-333301DA23F1}
+		{123A8C51-C6D0-4F96-8447-D23664119468} = {4ABDF4EA-5FEF-44E9-99BE-7E717A4986C9}
+		{7E58D5D4-825E-4D41-BF4E-DDB06519FBDF} = {BA1C5A95-242F-46A0-B594-222CEA375264}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E570EE23-BF6A-49B0-A7F1-FD69C4A909EF}
+	EndGlobalSection
+EndGlobal
