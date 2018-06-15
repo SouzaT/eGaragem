@@ -11,12 +11,12 @@
     <table>
         <tr>
             <td>
-                <button type="button" class="btn btn-primary">Locador</button>
-                <a>href="@Url.Action("Index", "Locador")" class="btn btn-primary" role="button">Locador</a>
+                <input type="button" class="btn btn-primary" value="Locador" onclick="@Url.Action("Index", "Locador")" />
+                @*<a>href="@Url.Action("Index", "Locador")" class="btn btn-primary" role="button">Locador</a>*@
             </td>
             <td>
-                <button type="button" class="btn btn-primary">Locatario</button>
-                <a>href="@Url.Action("Edit", "Locatario")" class="btn btn-primary" role="button">Locatario</a>
+                <input type="button" class="btn btn-primary" value="Locador" onclick="@Url.Action("Index", "Locatario")" />
+                @*<a>href="@Url.Action("Index", "Locatario")" class="btn btn-primary" role="button">Locatario</a>*@
             </td>
         </tr>
     </table>
