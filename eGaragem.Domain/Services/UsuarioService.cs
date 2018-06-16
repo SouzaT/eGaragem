@@ -1,4 +1,5 @@
-﻿using eGaragem.Domain.Interfaces.Service;
+﻿using eGaragem.Domain.Interfaces.Repository;
+using eGaragem.Domain.Interfaces.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,11 @@ namespace eGaragem.Domain.Services
 {
     public class UsuarioService : IUsuarioService
     {
-        //private readonly UsuarioRepository _usuarioRepository;
+        private readonly IUsuarioRepository _usuarioRepository;
+
+        public UsuarioService(IUsuarioRepository usuarioRepository)
+        {
+            _usuarioRepository = usuarioRepository;
+        }
     }
 }

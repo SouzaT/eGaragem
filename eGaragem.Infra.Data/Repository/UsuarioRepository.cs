@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace eGaragem.Infra.Data.Repository
 {
-    public class UsuarioRepository : IRepository<Usuario>, IUserRepository
+    public class UsuarioRepository : IRepository<Usuario>, IUsuarioRepository
     {
         private UnitOfWork _uow;
         public UsuarioRepository(Usuario usuario, IUnitOfWork uow)

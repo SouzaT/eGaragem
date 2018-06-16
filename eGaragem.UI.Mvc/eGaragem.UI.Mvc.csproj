@@ -200,7 +200,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\SimpleInjectorInitializer.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -302,10 +301,6 @@
     <ProjectReference Include="..\eGaragem.Application\eGaragem.Application.csproj">
       <Project>{7E58D5D4-825E-4D41-BF4E-DDB06519FBDF}</Project>
       <Name>eGaragem.Application</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\eGaragem.Infra.CrossCutting.IoC\eGaragem.Infra.CrossCutting.IoC.csproj">
-      <Project>{E6E098C9-E57D-46BB-8AFB-BD4D45F28A24}</Project>
-      <Name>eGaragem.Infra.CrossCutting.IoC</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eGaragem.Domain.Interfaces.Repository
 {
-    public interface IUserRepository : IRepository<Usuario>
+    public interface IUsuarioRepository : IRepository<Usuario>
     {
         Usuario ObterPorCpf(string cpf);
         Usuario ObterPorEmail(string email);

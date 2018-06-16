@@ -1,4 +1,5 @@
 ﻿using DomainValidation.Validation;
+using eGaragem.Domain.Validations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,12 @@ namespace eGaragem.Domain.Entities
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }
         public ValidationResult ValidationResult { get; set; }
+
+        public bool IsValid()
+        {
+            ValidationResult = new UsuarioEstaConsistenteValidation().Validate(this);
+            return ValidationResult.IsValid;
+        }
     }
 
 }
