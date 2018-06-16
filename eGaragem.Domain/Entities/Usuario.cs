@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DomainValidation.Validation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,7 @@ namespace eGaragem.Domain.Entities
         public DateTime DataNascimento { get; set; }
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }
-        //public ValidationResult ValidationResult { get; set; }
+        public ValidationResult ValidationResult { get; set; }
     }
 
 }
