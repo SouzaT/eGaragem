@@ -223,6 +223,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Logo.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -301,6 +302,10 @@
     <ProjectReference Include="..\eGaragem.Application\eGaragem.Application.csproj">
       <Project>{7E58D5D4-825E-4D41-BF4E-DDB06519FBDF}</Project>
       <Name>eGaragem.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eGaragem.Domain\eGaragem.Domain.csproj">
+      <Project>{809DA17A-9976-4D68-9F59-A880CA73F35F}</Project>
+      <Name>eGaragem.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

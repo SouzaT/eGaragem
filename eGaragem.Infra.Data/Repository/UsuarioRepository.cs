@@ -8,10 +8,10 @@ using System.Data.SqlClient;
 
 namespace eGaragem.Infra.Data.Repository
 {
-    public class UsuarioRepository : IRepository<Usuario>, IUsuarioRepository
+    public class UsuarioRepository
     {
         private UnitOfWork _uow;
-        public UsuarioRepository(Usuario usuario, IUnitOfWork uow)
+        public UsuarioRepository(IUnitOfWork uow)
         {
             if (uow == null)
                 throw new ArgumentNullException("uow");
@@ -28,17 +28,18 @@ namespace eGaragem.Infra.Data.Repository
         {
             using (var cmd = _uow.CreateCommand())
             {
-                cmd.CommandText = "Insert into Usuarios(Nome, Sobrenome, CPF, Email, DataNascimento, DataCadastro, Ativo) Values " +
-                    "(@Nome, @Sobrenome, @Cpf, @Email, @DataNascimento, @DataCadastro, @Ativo)";
+                cmd.CommandText = "Insert into Usuarios(UsuarioId, AspNetUserId, Nome, Sobrenome, CPF, DataNascimento, DataCadastro, Ativo) Values " +
+                    "(@UsuarioId, @AspNetUserId, @Nome, @Sobrenome, @Cpf, @DataNascimento, @DataCadastro, @Ativo)";
 
-                SqlParameter[] parametros = new SqlParameter[7];
+                SqlParameter[] parametros = new SqlParameter[8];
                 parametros[0] = new SqlParameter() { Value = obj.Nome, ParameterName = "@Nome" };
                 parametros[1] = new SqlParameter() { Value = obj.Sobrenome, ParameterName = "@Sobrenome" };
-                parametros[2] = new SqlParameter() { Value = obj.CPF, ParameterName = "@Cpf" };
-                parametros[3] = new SqlParameter() { Value = obj.Email, ParameterName = "@Email" };
-                parametros[4] = new SqlParameter() { Value = obj.DataNascimento, ParameterName = "@DataNascimento" };
-                parametros[5] = new SqlParameter() { Value = obj.DataCadastro, ParameterName = "@DataCadastro" };
-                parametros[7] = new SqlParameter() { Value = obj.Ativo, ParameterName = "@Ativo" };
+                parametros[2] = new SqlParameter() { Value = obj.Cpf, ParameterName = "@Cpf" };
+                parametros[3] = new SqlParameter() { Value = obj.DataNascimento, ParameterName = "@DataNascimento" };
+                parametros[4] = new SqlParameter() { Value = DateTime.Now, ParameterName = "@DataCadastro" };
+                parametros[5] = new SqlParameter() { Value = true, ParameterName = "@Ativo" };
+                parametros[6] = new SqlParameter() { Value = obj.UsuarioId, ParameterName = "@UsuarioId" };
+                parametros[7] = new SqlParameter() { Value = obj.AspNetUserId, ParameterName = "@AspNetUserId" };
 
                 for (int i = 0; i < parametros.Length; i++)
                 {
@@ -61,8 +62,8 @@ namespace eGaragem.Infra.Data.Repository
                 SqlParameter[] parametros = new SqlParameter[7];
                 parametros[0] = new SqlParameter() { Value = obj.Nome, ParameterName = "@Nome" };
                 parametros[1] = new SqlParameter() { Value = obj.Sobrenome, ParameterName = "@Sobrenome" };
-                parametros[2] = new SqlParameter() { Value = obj.CPF, ParameterName = "@Cpf" };
-                parametros[3] = new SqlParameter() { Value = obj.Email, ParameterName = "@Email" };
+                parametros[2] = new SqlParameter() { Value = obj.Cpf, ParameterName = "@Cpf" };
+                parametros[3] = new SqlParameter() { Value = string.Empty, ParameterName = "@Email" };
                 parametros[4] = new SqlParameter() { Value = obj.DataNascimento, ParameterName = "@DataNascimento" };
                 parametros[5] = new SqlParameter() { Value = obj.DataCadastro, ParameterName = "@DataCadastro" };
                 parametros[7] = new SqlParameter() { Value = obj.Ativo, ParameterName = "@Ativo" };
@@ -94,8 +95,7 @@ namespace eGaragem.Infra.Data.Repository
                         usuario.UsuarioId = new Guid(reader["UsuarioId"].ToString());
                         usuario.Nome = reader["Nome"].ToString();
                         usuario.Sobrenome = reader["Sobrenome"].ToString();
-                        usuario.CPF = reader["CPF"].ToString();
-                        usuario.Email = reader["Email"].ToString();
+                        usuario.Cpf = reader["CPF"].ToString();
                         usuario.DataNascimento = Convert.ToDateTime(reader["DataNascimento"].ToString());
                         usuario.DataCadastro = Convert.ToDateTime(reader["DataCadastro"].ToString());
                         usuario.Ativo = Convert.ToBoolean(reader["Ativo"].ToString());
@@ -121,8 +121,7 @@ namespace eGaragem.Infra.Data.Repository
                         usuario.UsuarioId = new Guid(reader["UsuarioId"].ToString());
                         usuario.Nome = reader["Nome"].ToString();
                         usuario.Sobrenome = reader["Sobrenome"].ToString();
-                        usuario.CPF = reader["CPF"].ToString();
-                        usuario.Email = reader["Email"].ToString();
+                        usuario.Cpf = reader["CPF"].ToString();
                         usuario.DataNascimento = Convert.ToDateTime(reader["DataNascimento"].ToString());
                         usuario.DataCadastro = Convert.ToDateTime(reader["DataCadastro"].ToString());
                         usuario.Ativo = Convert.ToBoolean(reader["Ativo"].ToString());
@@ -148,8 +147,7 @@ namespace eGaragem.Infra.Data.Repository
                         usuario.UsuarioId = new Guid(reader["UsuarioId"].ToString());
                         usuario.Nome = reader["Nome"].ToString();
                         usuario.Sobrenome = reader["Sobrenome"].ToString();
-                        usuario.CPF = reader["CPF"].ToString();
-                        usuario.Email = reader["Email"].ToString();
+                        usuario.Cpf = reader["CPF"].ToString();
                         usuario.DataNascimento = Convert.ToDateTime(reader["DataNascimento"].ToString());
                         usuario.DataCadastro = Convert.ToDateTime(reader["DataCadastro"].ToString());
                         usuario.Ativo = Convert.ToBoolean(reader["Ativo"].ToString());
@@ -172,8 +170,7 @@ namespace eGaragem.Infra.Data.Repository
                         usuario.UsuarioId = new Guid(reader["UsuarioId"].ToString());
                         usuario.Nome = reader["Nome"].ToString();
                         usuario.Sobrenome = reader["Sobrenome"].ToString();
-                        usuario.CPF = reader["CPF"].ToString();
-                        usuario.Email = reader["Email"].ToString();
+                        usuario.Cpf = reader["CPF"].ToString();
                         usuario.DataNascimento = Convert.ToDateTime(reader["DataNascimento"].ToString());
                         usuario.DataCadastro = Convert.ToDateTime(reader["DataCadastro"].ToString());
                         usuario.Ativo = Convert.ToBoolean(reader["Ativo"].ToString());

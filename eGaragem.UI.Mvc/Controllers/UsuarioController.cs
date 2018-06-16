@@ -1,4 +1,6 @@
-﻿using eGaragem.UI.Mvc.Models;
+﻿using eGaragem.Application;
+using eGaragem.UI.Mvc.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +19,12 @@ namespace eGaragem.UI.Mvc.Controllers
         }
 
         [Route("incluir-novo")]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [Route("incluir-novo")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(UsuarioViewModel usuarioViewModel)
@@ -24,7 +32,9 @@ namespace eGaragem.UI.Mvc.Controllers
             if (ModelState.IsValid)
             {
                 //TODO
-                //usuarioViewModel = inserir
+                var service = new UsuarioAppService();
+                usuarioViewModel.AspNetUserId = User.Identity.GetUserId();
+                usuarioViewModel = service.Adicionar(usuarioViewModel);
                 return RedirectToAction("Index");
                 
             }

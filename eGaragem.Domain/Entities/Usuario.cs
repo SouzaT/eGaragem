@@ -15,11 +15,10 @@ namespace eGaragem.Domain.Entities
             UsuarioId = new Guid();
         }
         public Guid UsuarioId { get; set; }
+        public string AspNetUserId { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
-        public string CPF { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public string Cpf { get; set; }
         public DateTime DataNascimento { get; set; }
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }

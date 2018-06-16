@@ -15,11 +15,9 @@ namespace eGaragem.Domain.Validations
         {
             var usuarioMaiorDeIdade = new UsuarioDeveSerMaiorDeIdadeSpecification();
             var CPFUsuario = new UsuarioDeveTerCpfValidoSpecification();
-            var usuarioEmail = new UsuarioDeveTerEmailValido();
 
             base.Add("usuarioMarioIdade", new Rule<Usuario>(usuarioMaiorDeIdade, "Usuario não tem maioridade para cadastro."));
             base.Add("CPFUsuario", new Rule<Usuario>(CPFUsuario, "Usuário informou um CPF inválido."));
-            base.Add("usuarEmail", new Rule<Usuario>(usuarioEmail, "Usuário deve informar um e-mail válido."));
         }
     }
 }

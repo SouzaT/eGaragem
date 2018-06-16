@@ -16,6 +16,9 @@ namespace eGaragem.UI.Mvc.Models
         [Key]
         public Guid UsuarioId { get; set; }
 
+        [ScaffoldColumn(false)]
+        public string AspNetUserId { get; set; }
+
         [Required(ErrorMessage = "Preencha o campo Nome")]
         [MaxLength(150, ErrorMessage = "Máximo {0} caracteres")]
         [MinLength(2, ErrorMessage = "Mínimo {0} caracteres")]
@@ -41,5 +44,8 @@ namespace eGaragem.UI.Mvc.Models
 
         [ScaffoldColumn(false)]
         public bool Ativo { get; set; }
+
+        [ScaffoldColumn(false)]
+        public DomainValidation.Validation.ValidationResult ValidationResult { get; set; }
     }
 }

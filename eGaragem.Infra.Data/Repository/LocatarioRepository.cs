@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace eGaragem.Infra.Data.Repository
 {
-    public class LocatarioRepository : IRepository<Locatario>, ILocatarioRepository
+    public class LocatarioRepository
     {
         private UnitOfWork _uow;
         public LocatarioRepository(IUnitOfWork uow)

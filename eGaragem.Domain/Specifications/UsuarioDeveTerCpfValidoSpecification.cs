@@ -8,7 +8,7 @@ namespace eGaragem.Domain.Specifications
     {
         public bool IsSatisfiedBy(Usuario usuario)
         {
-            return CpfValidation.Validar(usuario.CPF);
+            return CpfValidation.Validar(usuario.Cpf);
         }
     }
 }

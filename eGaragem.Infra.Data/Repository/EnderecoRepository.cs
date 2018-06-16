@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace eGaragem.Infra.Data.Repository
 {
-    public class EnderecoRepository : IRepository<Endereco>, IEnderecoRepository
+    public class EnderecoRepository
     {
         private UnitOfWork _uow;
 

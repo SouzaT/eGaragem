@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace eGaragem.Infra.Data.Repository
 {
-    public class AluguelRepository : IRepository<Aluguel>, IAluguelRepository
+    public class AluguelRepository
     {
         private UnitOfWork _uow;
         public AluguelRepository(IUnitOfWork uow)
