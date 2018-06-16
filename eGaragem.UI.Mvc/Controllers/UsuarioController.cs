@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace eGaragem.UI.Mvc.Controllers
 {
-    public class LocadorController : Controller
+    public class UsuarioController : Controller
     {
         // GET: Locador
         public ActionResult Index()
